@@ -1,5 +1,5 @@
 name        "gameiq"
-description "Manage GameIQ deployment process"
+description "Manage GameIQ setup & deployment processes"
 maintainer  "AWS OpsWorks"
 license     "Apache 2.0"
 version     "1.0.0"
