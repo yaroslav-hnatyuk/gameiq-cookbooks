@@ -1,4 +1,4 @@
-execute "deploy_gameiq_app" do
-    command "cd /var/www/html/public && /usr/local/bin/composer require friendsofcake/bootstrap-ui:~0.3 && /usr/local/bin/composer install"
+execute "set_database_config" do
+    command "cd /var/www/html/public/config && sudo rm app.php && cp /var/www/html/public/config/app.beta.php app.php"
     action :run
-end 
+end
