@@ -1,4 +1,7 @@
-execute "checkout_gameiq_app" do
-    command "cd /var/www/html && sudo -u ec2-user git clone git@github.com:gameiqinc/public.git && cd /var/www/html/public && git checkout v1.0 && sudo chown -R ec2-user .git/"
-    action :run
+git '/var/www/html' do
+   repository 'git@github.com:gameiqinc/public.git'
+   revision 'v1.0'
+   action :sync
+   user 'ec2-user'
+   group 'ec2-user'
 end
