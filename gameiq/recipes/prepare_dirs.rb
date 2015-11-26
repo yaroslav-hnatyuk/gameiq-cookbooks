@@ -1,4 +1,23 @@
-execute "prepare_directories" do
-    command "cd /var/www && sudo mkdir cgi-bin && sudo mkdir error && sudo mkdir html && sudo mkdir noindex"
-    action :run
+directory '/var/www/cgi-bin' do
+  owner 'ec2-user'
+  mode '0755'
+  action :create
+end 
+
+directory '/var/www/error' do
+  owner 'ec2-user'
+  mode '0755'
+  action :create
+end
+
+directory '/var/www/html' do
+  owner 'ec2-user'
+  mode '0777'
+  action :create
+end
+
+directory '/var/www/noindex' do
+  owner 'ec2-user'
+  mode '0755'
+  action :create
 end
